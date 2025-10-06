@@ -1,3 +1,20 @@
+
+
+install guide:
+
+1. run kinokatalog_DDL.sql in workbench
+
+2. to fill the database with initial test data run the seed_data.sql script
+
+3. Install Stored Procedures and Functions tbd
+
+4. Create Triggers, Events, and Views tbd
+
+
+
+
+
+
 create view for average movie rating
 
 ```
