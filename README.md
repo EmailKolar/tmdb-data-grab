@@ -6,24 +6,6 @@ install guide:
 
 2. to fill the database with initial test data run the seed_data.sql script
 
-3. Install Stored Procedures and Functions tbd
+3. Install Stored Procedures and Functions by runnnig thhe stored_procs_functions.sql script
 
-4. Create Triggers, Events, and Views tbd
-
-
-
-
-
-
-create view for average movie rating
-
-```
-CREATE OR REPLACE VIEW movie_ratings AS
-SELECT m.id AS movie_id, m.title,
-       COUNT(r.id) AS review_count,
-       ROUND(AVG(r.rating),2) AS avg_rating
-FROM movies m
-LEFT JOIN reviews r ON m.id = r.movie_id
-GROUP BY m.id, m.title;
-```
-
+4. Create Triggers, Events, and Views by running th e triggers_events_views.sql script
