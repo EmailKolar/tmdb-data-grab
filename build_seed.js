@@ -94,6 +94,15 @@ for (const m of data.movies) {
     );
   }
 }
+// -------------------- MOVIE_COMPANIES --------------------
+for (const m of data.movies) {
+  const mid = m.id;
+  for (const c of m.production_companies || []) {
+    lines.push(
+      `INSERT INTO movie_companies (movie_id, company_id) VALUES (${mid}, ${c.id});`
+    );
+  }
+}
 
 // -------------------- REVIEWS --------------------
 let reviewId = 1;
@@ -124,5 +133,5 @@ for (let uid = 1; uid <= 10; uid++) {
 }
 
 // -------------------- SAVE TO FILE --------------------
-fs.writeFileSync("seed_data.sql", lines.join("\n"));
+fs.writeFileSync("seed_data2.sql", lines.join("\n"));
 console.log("✅ SQL seed file created: seed_data.sql");
